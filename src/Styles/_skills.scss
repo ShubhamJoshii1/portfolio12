@@ -18,12 +18,6 @@
         row-gap: 15px;
         overflow: hidden;
         animation-duration: 10s;
-        // animation-name: Anime;
-        // gap: 15px;
-        // padding: 20vw;
-        // display: grid;
-        // grid-template-columns: repeat(5, 1fr);
-        // grid-gap: 20px 60px;
 
         #cards {
             display: flex;
@@ -44,25 +38,25 @@
             h3 {
                 font-size: 18px;
             }
+
+            img{
+                margin-left: 10px;
+                width: 43px;
+                height: 38px;
+                border-radius: 4px;
+            }
             
             #skillsKnow{
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
                 transition: 1s;
-                // padding: 5px 15px;
-                // height: 32px;
-                // right: -125%;
                 height: 100%;
                 width: 100%;
                 left: 100%;
                 gap: 0 10px;
                 position: absolute;
-                // background-color: red;
-                // left: -100px;
-                img{
-                    margin-left: 10px;
-                }
+                
                 div{
                     margin-right: 10px;
                     flex: 1;
@@ -81,7 +75,6 @@
                     margin: 0;
                     div{
                         width: 4.5px;
-                        // height: 3px;
                         aspect-ratio: 1;
                         background-color: white;
                         border-radius: 50%;

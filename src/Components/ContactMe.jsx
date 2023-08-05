@@ -79,7 +79,7 @@ const ContactMe = ({ setActiveNavbar }) => {
       </div>
       <form id='ContactMEForm' method='POST'>
         <input type='text' placeholder='Your Name' name='User_Name' onChange={handleInput} value={ContactForm.User_Name} />
-        <input type='text' placeholder='Your Email' name='User_Email' onChange={handleInput} value={ContactForm.User_Email} />
+        <input type='email' placeholder='Your Email' name='User_Email' onChange={handleInput} value={ContactForm.User_Email} />
         <textarea placeholder='Your Message' name='User_Message' onChange={handleInput} value={ContactForm.User_Message}></textarea>
         <input type='submit' value="Submit" onClick={handleSubmit} />
       </form>

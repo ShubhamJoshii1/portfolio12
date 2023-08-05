@@ -8,6 +8,7 @@ import MongoLogo from "../Assets/Mongo.png"
 import FirebaseLogo from "../Assets/Firebase.png"
 import PythonLogo from "../Assets/Python.png"
 import FigmaLogo from "../Assets/Figma.png"
+import SassLogo from "../Assets/Sass.png"
 import { IoMdArrowDropdown, IoMdArrowDropup } from "react-icons/io"
 
 const SkillsData = [
@@ -58,6 +59,12 @@ const SkillsData = [
     Image: MongoLogo,
     Color: "064663",
     knowledgePercent: "80%"
+  },
+  {
+    Text: "SASS",
+    Image: SassLogo,
+    Color: "bf4080",
+    knowledgePercent: "65%"
   },
   {
     Text: "FIREBASE",
