@@ -1,0 +1,157 @@
+#Skills {
+    color: white;
+    background-color: #0B0A0B;
+    padding: 50px 11%;
+
+    h2 {
+        margin: 0;
+        margin-left: -50px;
+        padding-bottom: 20px;
+    }
+
+    #cardsCollection {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        column-gap: 55px;
+        row-gap: 15px;
+        overflow: hidden;
+        animation-duration: 10s;
+        // animation-name: Anime;
+        // gap: 15px;
+        // padding: 20vw;
+        // display: grid;
+        // grid-template-columns: repeat(5, 1fr);
+        // grid-gap: 20px 60px;
+
+        #cards {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5px 15px;
+            height: 32px;
+            border-radius: 10px;
+            border: none;
+            gap: 0 10px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            &:hover #skillsKnow{
+                left: 0;
+            }
+            
+            h3 {
+                font-size: 18px;
+            }
+            
+            #skillsKnow{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                transition: 1s;
+                // padding: 5px 15px;
+                // height: 32px;
+                // right: -125%;
+                height: 100%;
+                width: 100%;
+                left: 100%;
+                gap: 0 10px;
+                position: absolute;
+                // background-color: red;
+                // left: -100px;
+                img{
+                    margin-left: 10px;
+                }
+                div{
+                    margin-right: 10px;
+                    flex: 1;
+                }
+                p{
+                    margin: 0;
+                    font-size: 15px;
+                    text-align: center;
+                    font-weight: bold;
+                }
+                #percent{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 2px;
+                    margin: 0;
+                    div{
+                        width: 4.5px;
+                        // height: 3px;
+                        aspect-ratio: 1;
+                        background-color: white;
+                        border-radius: 50%;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+
+    }
+
+    #cardsShowMore {
+        align-items: center;
+        justify-content: center;
+        padding: 5px 15px;
+        height: 32px;
+        width: 130px;
+        border-radius: 10px;
+        border: none;
+        margin: auto;
+        margin-top: 10px;
+        display: none;
+        cursor: pointer;
+        h3 {
+            font-size: 18px;
+        }
+        #dropDown {
+            font-size: 25px;
+        }
+    }
+    
+    @media only screen and (max-width: 1055px) {
+        #cardsCollection {
+            height: 100px;
+        }
+
+        #cardsShowMore {
+            display: flex;
+        }
+
+    }
+
+    @media only screen and (max-width: 865px) {
+        padding: 50px 10px;
+        h2{
+            margin-left: 30px;
+        }
+        #cardsCollection{
+            margin: 0 20px;
+            column-gap: 12px;
+        }
+    }
+    @media only screen and (max-width: 638px) {
+        // h2 {
+        //     margin-left: 0px;
+        // }
+
+        #cardsCollection #cards:nth-last-col() {
+            display: none;
+        }
+    }
+
+}
+
+@keyframes Anime {
+    from {
+        height: 100px;
+    }
+
+    to {
+        height: 100%;
+    }
+}
