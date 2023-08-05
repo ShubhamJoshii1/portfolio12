@@ -4,60 +4,68 @@ import Project2 from "../Assets/Projects (2).png";
 import Project3 from "../Assets/Projects (3).png";
 import Project4 from "../Assets/Projects (4).png";
 import Project5 from "../Assets/Projects (5).png";
+import Project6 from "../Assets/Projects (6).png";
 import { FaCaretSquareLeft, FaCaretSquareRight, FaGithub, FaLink } from "react-icons/fa";
 
 
-const Projects = ({setActiveNavbar}) => {
+const Projects = ({ setActiveNavbar }) => {
     // const [count, setCount] = useState(0);
     const [Projects, setProjects] = useState([
         {
             Image: Project1,
             Topic: "Hotstar Clone",
-            GithubLink:"https://github.com/ShubhamJoshii/Hotstar-Clone",
-            HostLink:"https://shubhamjoshii.github.io/Hotstar-Clone/",
-            Language_Used: [{ Text: "ReactJS", Color: "5CCFEE" },{ Text: "CSS", Color: "2760E5" }]
+            GithubLink: "https://github.com/ShubhamJoshii/Hotstar-Clone",
+            HostLink: "https://shubhamjoshii.github.io/Hotstar-Clone/",
+            Language_Used: [{ Text: "ReactJS", Color: "5CCFEE" }, { Text: "CSS", Color: "2760E5" }]
         },
         {
             Image: Project3,
             Topic: "Talkie-Chat App",
-            GithubLink:"https://github.com/ShubhamJoshii/TalkieChat",
-            HostLink:"https://talkie-chat.vercel.app/",
-            Language_Used: [{ Text: "ReactJS", Color: "5CCFEE" }, { Text: "Mongodb", Color: "3E9837" }, { Text: "ExpressJS", Color: "FFE600" }, { Text: "NodeJS", Color: "3E9837" }, { Text: "Firebase", Color: "FEA714" },{ Text: "CSS", Color: "2760E5" }]
+            GithubLink: "https://github.com/ShubhamJoshii/TalkieChat",
+            HostLink: "https://talkie-chat.vercel.app/",
+            Language_Used: [{ Text: "ReactJS", Color: "5CCFEE" }, { Text: "Mongodb", Color: "3E9837" }, { Text: "ExpressJS", Color: "FFE600" }, { Text: "NodeJS", Color: "3E9837" }, { Text: "Firebase", Color: "FEA714" }, { Text: "CSS", Color: "2760E5" }]
+        },
+        {
+            Image: Project6,
+            Topic: "Perky-Beans",
+            GithubLink: "https://github.com/ShubhamJoshii/perky-beans",
+            HostLink: "https://perky-beans.vercel.app/",
+            Language_Used: [{ Text: "ReactJS", Color: "5CCFEE" }, { Text: "Mongodb", Color: "3E9837" }, { Text: "ExpressJS", Color: "FFE600" }, { Text: "NodeJS", Color: "3E9837" }, { Text: "Firebase", Color: "FEA714" }, { Text: "Sass", Color: "bf4080" }]
         },
         {
             Image: Project2,
             Topic: "Login-Register Form",
-            GithubLink:"https://github.com/ShubhamJoshii/LoginRegisterMERN",
-            HostLink:"http://mern-project-ten.vercel.app/",
-            Language_Used: [{ Text: "ReactJS", Color: "5CCFEE" }, { Text: "Mongodb", Color: "3E9837" }, { Text: "ExpressJS", Color: "FFE600" }, { Text: "NodeJS", Color: "3E9837" },{ Text: "CSS", Color: "2760E5" }]
+            GithubLink: "https://github.com/ShubhamJoshii/LoginRegisterMERN",
+            HostLink: "http://mern-project-ten.vercel.app/",
+            Language_Used: [{ Text: "ReactJS", Color: "5CCFEE" }, { Text: "Mongodb", Color: "3E9837" }, { Text: "ExpressJS", Color: "FFE600" }, { Text: "NodeJS", Color: "3E9837" }, { Text: "CSS", Color: "2760E5" }]
         },
         {
             Image: Project4,
             Topic: "Admin Dashboard",
-            GithubLink:"https://github.com/ShubhamJoshii/AdminDashboard",
-            HostLink:"https://shubhamjoshii.github.io/AdminDashboard/",
+            GithubLink: "https://github.com/ShubhamJoshii/AdminDashboard",
+            HostLink: "https://shubhamjoshii.github.io/AdminDashboard/",
             Language_Used: [{ Text: "ReactJS", Color: "5CCFEE" }, { Text: "CSS", Color: "2760E5" }]
         },
         {
             Image: Project5,
             Topic: "Amazon Clone",
-            GithubLink:"https://github.com/ShubhamJoshii/AmazonClone",
-            HostLink:"https://amazon-clone-shubhamjoshii.vercel.app/",
-            Language_Used: [{ Text: "ReactJS", Color: "5CCFEE" }, { Text: "Mongodb", Color: "3E9837" }, { Text: "ExpressJS", Color: "FFE600" },{ Text: "CSS", Color: "2760E5" }]
+            GithubLink: "https://github.com/ShubhamJoshii/AmazonClone",
+            HostLink: "https://amazon-clone-shubhamjoshii.vercel.app/",
+            Language_Used: [{ Text: "ReactJS", Color: "5CCFEE" }, { Text: "Mongodb", Color: "3E9837" }, { Text: "ExpressJS", Color: "FFE600" }, { Text: "CSS", Color: "2760E5" }]
         },
     ])
     return (
-        <section id="Projects"  onMouseEnter={()=>setActiveNavbar("Projects")}>
+        <section id="Projects" onMouseEnter={() => setActiveNavbar("Projects")}>
             <div id='ProjectsInner'>
                 <h1>My Projects</h1>
                 <p>Following projects showcase my skills and experience through real-world examples of my work. Each project is briefly described with links to GITHUB repositories and live demos of it. It reflects my ability to solve complex problems, work with different technologies, and manage projects effectively.</p>
                 <div id='ProjectCollections'>
                     <div id='Icons'>
                         <FaCaretSquareLeft id='leftIcon' onClick={() => {
-                            setProjects([...Projects.splice(1, Projects.length), Projects.shift()])
+                            setProjects([Projects.pop(), ...Projects.splice(0, Projects.length)])
                         }} />
                         <FaCaretSquareRight id='RightIcon' onClick={() => {
-                            setProjects([Projects.pop(), ...Projects.splice(0, Projects.length)])
+                            setProjects([...Projects.splice(1, Projects.length), Projects.shift()])
                         }} />
                     </div>
                     {
@@ -93,7 +101,7 @@ const Projects = ({setActiveNavbar}) => {
                                     <h2>{curr.Topic}</h2>
                                     <div id='languagesUsed'>
                                         {
-                                            curr.Language_Used.map((curr2,ids2) => {
+                                            curr.Language_Used.map((curr2, ids2) => {
                                                 // console.log(curr2);
                                                 return <span style={{ color: `#${curr2.Color}` }} key={ids2}>#{curr2.Text}</span>
                                             })
